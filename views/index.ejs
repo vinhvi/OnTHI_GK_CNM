@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="content">
+        <form id="delete" method="POST" action="/delete" enctype="multipart/form-data" id="ttt">
+            <div class="title">
+                <h5 style="font-size: 25px;margin-left: 35px;">Danh sách sản phẩm</h5>
+            </div>
+            <table border="1" style="margin-right: 50px;font-size: 15px;text-align: center;">
+                <tr>
+                    <th>STT</th>
+                    <th>Tên bài báo</th>
+                    <th>Tên nhóm tác giả</th>
+                    <th>Chỉ số ISBN</th>
+                    <th>Số trang</th>
+                    <th>Năm xuất bản</th>
+                </tr>
+                <%for (let i=0;i<data.length;i++){%>
+                    <tr>
+                        <td>
+                            <%=i+1%>
+                        </td>
+                        <td>
+                            <%=data[i].name_bao%>
+                        </td>
+                        <td>
+                            <%=data[i].name_tg%>
+                        </td>
+                        <td>
+                            <%=data[i].isbn%>
+                        </td>
+                        <td>
+                            <%=data[i].so_trang%>
+                        </td>
+                        <td>
+                            <%=data[i].nxb%>
+                        </td>
+                        <td><input type="checkbox" name="<%=data[i].id_bao%>" /></td>
+                    </tr>
+                    <%}%>
+            </table>
+            <input type="submit" style="font-size: 20px;background-color: red;color: aliceblue;size: 20px;" value="Delete" id="ttt" />
+        </form>
+        <div>
+            <form action="/add">
+                <input type="submit" style="margin-top: 10px;font-size: 20px;background-color: green;color: aliceblue; size: 50px;" value="Add">
+            </form>
+        </div>
+       
+    </div>
+</body>
+
+</html>
