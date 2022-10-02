@@ -1,0 +1,13 @@
+accessKeyId: "AKIA33RYQ4ZFSQY372EB",
+  secretAccessKey: "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",
+  region: "ap-southeast-1",
+  
+  B1: Kiểm tra máy đã cài nodejs chưa nếu chưa thì cài đặt ở link: https://nodejs.org/en/
+  B7: Tiến hành khởi tạo dự án. Gõ “npm init –y”. Sẽ xuất hiện file package.json thay đổi thông tin của dự án thì vào này thay đổi.
+  -	Gõ “npm install express” vào terminal
+  -	Code mẫu: http://expressjs.com/en/starter/hello-world.html
+  B9: Run express: node index.js. Tìm hiểu nodemon để chạy bằng cách khác.
+  
+  Bước 1: Install thư viện aws-sdk: npm install aws-sdk
+  
+  Bước 5: Cài đặt thư viện multer: npm install multer
